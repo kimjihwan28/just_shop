@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/just_shop/static/js/main.e8d9b105.js",
+    "index.html": "/just_shop/index.html",
+    "main.e8d9b105.js.map": "/just_shop/static/js/main.e8d9b105.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.e8d9b105.js"
+  ]
+}

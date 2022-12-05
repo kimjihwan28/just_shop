@@ -1,0 +1,53 @@
+컴포넌트내의 
+JSX 수정내용
+
+className
+<img />
+<br />
+
+
+//1. function HeaderComponent(props){
+
+   // 프롭스를 중괄호를 사용 직접 비구조화 등록
+   //2. function HeaderComponent({homePath,logoTitle,imgSrc,imgAlt}){
+   
+   //3. 프롭스로 내려받아서 비구조화 등록
+   function HeaderComponent(props){
+
+      const {homePath,logoTitle,imgSrc,imgAlt} = props;
+
+      // 상태관리 React.useState()
+      const [addClass, setAddClass] = React.useState(false);    
+      
+      // 상태관리 변수 addClass 를 마우스가 클릭하면 true 상태변경
+      // const onClickAddClass=(e)=>{
+      //    e.preventDefault();
+      //    alert('클릭!');
+      //    setAddClass(true);  //상태변경
+      // }   
+   
+
+      // // 상태관리변수 addClass 를 마우스가 클릭하면 false 상태변경
+      // const onClickAddClass2=(e)=>{
+      //    e.preventDefault();
+      //    alert('클릭!');
+      //    setAddClass(false);  //상태변경
+      // }
+
+
+      // 메인버튼에 마우스 올리면 onMouseEnter   addClass 를 true 상태변경
+      const onMouseEnterAddClass=()=>{
+         setAddClass(true);
+      }
+
+      // nav를 마우스 떠나면 onMouseLeave addClass 를 false 상태변경
+      const onMouseLeaveAddCalss=()=>{
+         setAddClass(false);
+      }
+
+      return(
+         <header id="header">
+            <div className="left">
+               {/* <h1><a href={props.homePath} title={props.logoTitle}><img src={props.imgSrc} alt={props.imgAlt} /></a></h1> */}
+               <h1><a href={homePath} title={logoTitle}><img src={imgSrc} alt={imgAlt} /></a></h1>
+            </div>
